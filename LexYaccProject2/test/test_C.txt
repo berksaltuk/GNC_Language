@@ -1,0 +1,29 @@
+#?
+ TEST C - a program that defines a fuunction 
+ that thats a set and element as its argument,
+ removes that element from the set and returns the remaining elements,
+ reads a set from a file,
+ removes an element of your choice from the set by calling the function defined,
+ displays the resulting set. 
+?#
+set function ?deleteAndReturn( double set *s, double d){
+
+	*s.remove( d );
+	
+	return *s;
+}
+
+void main(){
+
+	double set *s;
+	*s <<< "double_set.txt";
+	
+	if( *s.contains(5.0))
+	{
+		?deleteAndReturn(*s, 5.0);
+	}
+	
+	*s.display();
+	
+}
+## END OF THIS PROGRAM

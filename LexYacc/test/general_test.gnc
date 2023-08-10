@@ -1,0 +1,53 @@
+#?
+{ 5, 5 , 5 }
+(								
+)								
+{								
+}								
+= 								
++				       	        	
+-				       	        
+*								
+/								
+%								
+==					        	
+!=					       
+<								
+<=							
+>									
+>=							
+*=							
+\=							
++=							
+-=							
+&&							
+||							
+!								
+.								
+,								
+; 								
+for								
+while							
+if								
+else_if							
+else 							
+set								
+function						
+return							
+print							
+int				      			
+boolean				      		
+double				      		
+char							
+main							
+{string_literal} 				printf("STRING_LITERAL ");
+{int_literal}           		printf("INT_LITERAL ");
+{double_literal}        		printf("DOUBLE_LITERAL ");
+{boolean_literal}				printf("BOOLEAN_LITERAL ");
+{char_literal}					printf("CHAR_LITERAL ");
+{letter}{alphanumeric}*			printf("IDENTIFIER ");
+\&{letter}{alphanumeric}*		printf("IDENTIFIER_SET ");
+{comment}						printf("COMMENT ");
+{return_type}					printf("RETURN_TYPE ");
+[ \t\n]                         ;
+?#

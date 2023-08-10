@@ -1,0 +1,27 @@
+## A program for representation of sets and set elements, assignment operator, 
+## variable identifiers, logical, relational and arithmetic expressions
+void main() {
+    int set *i = {};
+    int set *k = {8};
+    int set *j = {1,15,13};
+    int set *z = *k;
+    
+    boolean test1 = true;
+    boolean test2 = false;
+    test2 = test1 || test2;
+    test2 = !test2 && test2;
+    
+    double x;
+    double y = 3.55;
+    x = y + 8.45;
+    x += 2.1;
+    x = x - 3.0 / 5.0 + 1.0;
+    test1 = x >= y;
+    test2 = x < y && test1;
+    int y = 5;
+    int z = 4;
+    int z = 5 % (4 + 1) + 2;
+    y = y - z - 1;
+    y = (y - 2) * 4 + 6;
+}
+## END OF THIS PROGRAM

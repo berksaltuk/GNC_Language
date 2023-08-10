@@ -1,0 +1,27 @@
+## A program for operations related to creating and deleting a set and primitive functions operated on sets
+void main(){
+	int set *test1 = {10,20,30,50};
+	int set *test2;
+	int set *test3 = {};
+	int set *test4;
+	boolean empty3 = *test3.is_empty();
+	*test2.copy(*test1);
+	*test3.copy({80});
+	*test4 = *test1.filter(x < 25);
+	int card1 = *test1.cardinality();
+	int card2 = *test2.cardinality();
+	int card3 = *test3.cardinality();
+	int card4 = *test4.cardinality();
+	boolean single1 = *test1.is_singleton();
+	boolean single3 = *test3.is_singleton();
+	*test3.add(100);
+	card3 = *test3.cardinality();
+	*test3.remove(100);
+	card3 = *test3.cardinality();
+	*test3.random_remove();
+	card3 = *test3.cardinality();
+	delete(*test1);
+	delete(*test2);
+}
+## END OF THIS PROGRAM   
+## I think that's all, I hope you liked GNC!

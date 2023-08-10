@@ -1,0 +1,48 @@
+## A program for input/output sets, from/to file. Testing set operations and relations
+void main(){
+   
+   int set *s1;
+   int set *s2;
+   int set *s3;
+   
+   *s1 <<< "set_01.txt";
+   *s2 <<< "set_02.txt";
+   *s3 <<< "set_03.txt"; 
+
+   int two = 2;
+
+   *s1.add(two);
+   *s3.random_remove();
+
+   boolean isEmpty = *s2.is_empty();
+   boolean isSingleton = *s2.is_singleton();
+
+   int set *s10;
+   *s10.copy(*s2);
+
+   boolean containing = *s2.contains(10);
+
+   *s2 <<< "set_02.txt";
+   *s10 >>> "set_10.txt";
+
+   *s10.display();
+
+   int set *s4 = *s1 $u *s2;
+   int set *s5 = *s1 $n *s2;
+   *s5 = *s1 $\ *s2;
+   *s5 = *s1 $x *s2;
+   
+   boolean precedenceRules = *s1 $> *s2 $u *s1;
+   
+   boolean isSuperset = *s1 $> *s2;
+   boolean isProperSubset = *s1 $<< *s3;
+   boolean isSubset = *s1 $< *s2;
+
+   boolean isOverlapping = *s1 $o *s2;
+   boolean isDisjoint = *s1 $d *s2;
+
+   *s1 >>> "set_01.txt";
+   *s2 >>> "set_02.txt";
+   *s3 >>> "set_03.txt";
+}
+## END OF THIS PROGRAM

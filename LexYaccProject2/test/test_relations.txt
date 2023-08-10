@@ -1,0 +1,12 @@
+void main(){
+
+  boolean tester = TRUE;
+  int set *s1 = {2,3,88};
+  int set *s2 = {2};
+
+  boolean tester2 = tester && (*s1 $< *s2);
+  print(tester2);
+  if(!*s1.is_empty()){
+    print("WAW");
+  }
+}

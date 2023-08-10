@@ -1,0 +1,311 @@
+#?
+ TEST A - a program that reads a set from a file, whose name is given,
+ displays the elements on the console, 
+ or a special message if the set is empty.
+?#
+void main(){
+
+	int set *s1;
+	*s1 <<< "int_set.txt";
+	
+	if( !(*s1.is_empty()))
+		*s1.display();
+	else
+	{
+		print("This set is empty!");
+	}
+	
+}
+## END OF THIS PROGRAM
+
+#?
+ TEST B - a program that initializes a variable to a set of elements of 
+ your choice, initializes the second variable to a set of elements of 
+ your choice,initializes the third variable to the union of 
+ the sets in the other two variables,
+ displays the elements of the third variable,
+ saves the contents of the third variable to a file,
+ deletes all of these variables.
+?#
+void main() {
+	
+	int set *s1 = {1, 2, 3};
+	int set *s2 = {1, 5, 3, 7, 11};
+	
+	int set *s3 = *s1 *u *s2;
+
+	string str = "file.txt";
+	*s3.display();
+	*s3 >>> str;
+	
+	*s1.delete();
+	*s2.delete();
+	*s3.delete();
+	
+}
+## END OF THIS PROGRAM
+
+#?
+ TEST C - a program that defines a fuunction 
+ that thats a set and element as its argument,
+ removes that element from the set and returns the remaining elements,
+ reads a set from a file,
+ removes an element of your choice from the set by calling the function defined,
+ displays the resulting set. 
+?#
+set function ?deleteAndReturn( double set *s, double d){
+
+	*s.remove( d );
+	
+	return *s;
+}
+
+void main(){
+
+	double set *s;
+	*s <<< "double_set.txt";
+	
+	if( *s.contains(5.0))
+	{
+		?deleteAndReturn(*s, 5.0);
+	}
+	
+	*s.output();
+	
+}
+## END OF THIS PROGRAM
+
+## A program for representation of sets and set elements, assignment operator, 
+## variable identifiers, logical, relational and arithmetic expressions
+void main() {
+    int set *i = {};
+    int set *k = {8};
+    int set *j = {1,15,13};
+    int set *z = k;
+    
+    boolean test1 = true;
+    boolean test2 = false;
+    test2 = test1 || test2;
+    test2 = !test2 && test2;
+    
+    double x;
+    double y = 3.55;
+    x = y + 8.45;
+    x += 2.1;
+    x = x - 3.0 / 5.0 + 1.0;
+    test1 = x >= y;
+    test2 = x < y && test1;
+    int y = 5;
+    int z = 4;
+    int z = 5 % (4 + 1) + 2;
+    y = y - z - 1;
+    y = (y-2) * 4 + 6;
+}
+## END OF THIS PROGRAM
+
+#? 
+  This is a program for testing nested statements
+  It simulates a bomb defusion scenario according to the sum of elements in a set
+?#
+void main()
+{
+  int set *bomb = {};
+  print("Bomb will explode if sum of elements in your set is less than 100, but be careful if sum exceeds 100 too much it will explode anyway!\n");
+  print("Give me 10 elements:");
+  
+  for( int i = 0; i < 10; i += 1)
+  {
+    bomb.input();
+  }
+  
+  print("Okay, let me do the calculation!");
+  
+  int sum = 0;
+  
+  foreach( int num : bomb)
+  {
+    sum = sum + num;
+  }
+  
+  if( sum < 100)
+  {
+    print("Hold up, it is going to explode in 10 seconds!");
+    int x;
+    x = 0;
+    while( x < 10 )
+    {
+      print("Seconds left to the explosion: ");
+      print(10 - j);
+      i += 1;
+    }
+  }
+  else_if( sum > 1000)
+  {
+    if( sum > 10000)
+      print("Why did you do that I warned y... BOOOMMMM!");
+    else
+    {
+      print("You have triggered it, it will explode in 5 seconds!");
+      for( int j = 0; j < 5; j = j + 1) { print( 5 - i); }
+      
+      print("BOOOOOMMMM!");
+    }
+  }
+  else
+    print("Bomb has been defused, thanks for saving us!");
+}
+## END OF THIS PROGRAM
+
+## A program for testing for loops and conditional statements
+void main(){
+    int set *set1 = {}
+
+    string set *s1 = {"a","b","c","k","f"}
+    string element = "11";
+    string deletedElement;
+    
+    for (int i = 0; i < 10; i += 1) {
+        *s1.push(element);
+        
+        int size = *s1.cardinality();
+        if(size != 0){
+          deletedElement = *s1.pop();
+          print("deletedElement");
+        }
+        else{
+          print("if the set is empty true will be printed: ");
+          print(*s1.is_empty());
+        }
+     }
+    double set *s5;
+    *s5 <<< "calculator_set.txt";
+
+    double total = 0.0;
+
+    foreach( double x : *s5) {
+        total += x;
+    }
+
+    print(total);
+}
+## END OF THIS PROGRAM
+
+## A program for basic function definitions 
+int function ?foo1(int x) {
+    int x = 50;
+    
+    if (x < 10) {
+        print("IF");
+    }   
+    else_if (x < 100) {
+        print("ELSE IF");
+    } 
+    else {
+        print("ELSE");
+    }
+    
+    return x;
+} 
+
+set function ?foo2(int set *s) {
+    
+    if (*s.is_empty()) {
+        print("IF");
+    }   
+    else_if (*s.is_singleton()) {
+        print("ELSE IF");
+    } 
+    else {
+        print("ELSE");
+    }
+    
+    return *s;
+} 
+
+void main(){
+    int x = 44;
+    
+    int y = ?foo1(x);
+    
+    int set *s1 = {1};
+     
+    int set *s2 = ?foo2(*s1);
+}
+## END OF THIS PROGRAM
+
+## A program for input/output sets, from/to file. Testing set operations and relations
+void main(){
+   
+   int set *s1;
+   int set *s2;
+   int set *s3;
+   
+   *s1 <<< "set_01.txt";
+   *s2 <<< "set_02.txt";
+   *s3 <<< "set_03.txt"; 
+
+   int two = 2;
+
+   *s1.push(two);
+   *s3.pop();
+
+   boolean isEmpty = *s2.is_empty();
+   boolean isSingleton = *s2.is_singleton();
+
+   int set *s10;
+   *s10.copy(*s2);
+
+   boolean contains = *s2.contains(10);
+
+   *s2 <<< "set_02.txt";
+   *s10 >>> "set_10.txt";
+
+   *s10.display();
+
+   int set *s4 = *s1 *u *s2;
+   int set *s5 = *s1 *n *s2;
+   *s5 = *s1 *\ *s2;
+   *s5 = *s1 *x *s2;
+   
+   boolean precedenceRules = *s1 *> *s2 *u *s1;
+   
+   boolean isSuperset = *s1 *> *s2;
+   boolean isProperSubset = *s1 **< *s3;
+   boolean isSubset = *s1 *< *s2;
+
+   boolean isOverlapping = *s1 overlapping *s2;
+   boolean isDisjoint = *s1 disjoint *s2;
+
+   *s1 >>> "set_01.txt";
+   *s2 >>> "set_02.txt";
+   *s3 >>> "set_03.txt";
+}
+## END OF THIS PROGRAM
+
+## A program for operations related to creating and deleting a set and primitive functions operated on sets
+void main(){
+	int set *test1 = {10,20,30,50};
+	int set *test2;
+	int set *test3 = {};
+	int set *test4;
+	bool empty3 = *test3.is_empty();
+	*test2.copy(test1);
+	*test3.copy({80});
+	*test4 = *test1.filter(x < 25);
+	int card1 = *test1.cardinality();
+	int card2 = *test2.cardinality();
+	int card3 = *test3.cardinality();
+	int card4 = *test4.cardinality();
+	bool single1 = *test1.is_singleton();
+	bool single3 = *test3.is_singleton();
+	*test3.push(100);
+	card3 = *test3.cardinality();
+	*test3.remove(100);
+	card3 = *test3.cardinality();
+	*test3.pop();
+	card3 = *test3.cardinality();
+	*test1.delete();
+	*test2.delete();
+}
+## END OF THIS PROGRAM   
+## I think that's all, I hope you liked GNC!

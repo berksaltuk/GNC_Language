@@ -1,0 +1,33 @@
+## A program for testing for loops and conditional statements
+void main(){
+    int set *set1 = {};
+
+    string set *s1 = {"a","b","c","k","f"};
+    string element = "11";
+    string deletedElement;
+    
+    for (int i = 0; i < 10; i += 1) {
+        *s1.add(element);
+        
+        int size = *s1.cardinality();
+        if(size != 0){
+          deletedElement = *s1.random_remove();
+          print("deletedElement");
+        }
+        else{
+          print("if the set is empty true will be printed: ");
+          print("Set is empty: " + *s1.is_empty());
+        }
+     }
+    double set *s5;
+    *s5 <<< "calculator_set.txt";
+
+    double total = 0.0;
+
+    foreach( double x : *s5) {
+        total += x;
+    }
+
+    print(total);
+}
+## END OF THIS PROGRAM

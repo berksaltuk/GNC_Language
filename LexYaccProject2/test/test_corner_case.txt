@@ -1,0 +1,29 @@
+int function ?sum(int a, int v){
+
+	return a + v;
+}
+
+void main(){
+
+	int i = 0;
+	boolean exp1 = TRUE;
+	boolean exp2 = FALSE;
+	
+	if( exp1 || exp2 && !(exp1 != exp2))
+	{
+	 i = 3;
+	}
+	
+	int a = 2;
+	int b = 14;
+	a = ?checkBattery(a + b, ?checkBattery( 3, 7));
+	
+	while( i < 10 && ( 3 == 3)){
+
+		i += 1;
+	}
+	
+	boolean something = a < b && ( {1} $< {1, 2});
+
+	return;	
+}

@@ -1,0 +1,26 @@
+#?
+ TEST B - a program that initializes a variable to a set of elements of 
+ your choice, initializes the second variable to a set of elements of 
+ your choice,initializes the third variable to the union of 
+ the sets in the other two variables,
+ displays the elements of the third variable,
+ saves the contents of the third variable to a file,
+ deletes all of these variables.
+?#
+void main() {
+	
+	int set *s1 = {1, 2, 3};
+	int set *s2 = {1, 5, 3, 7, 11};
+	
+	int set *s3 = *s1 $u *s2;
+
+	string str = "file.txt";
+	*s3.display();
+	*s3 >>> str;
+	
+	delete(*s1);
+	delete(*s2);
+	delete(*s3);
+	
+}
+## END OF THIS PROGRAM

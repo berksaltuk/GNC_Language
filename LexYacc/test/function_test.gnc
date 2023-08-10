@@ -1,0 +1,44 @@
+#?
+
+int function ?foo1(int x) {
+    int x = 50;
+    
+    if (x < 10) {
+        print("IF");
+    }   
+    else if (x < 100) {
+        print("ELSE IF");
+    } 
+    else {
+        print("ELSE");
+    }
+    
+    return x;
+} 
+
+set function ?foo2(int set *x) {
+    
+    if (*x.is_empty()) {
+        print("IF");
+    }   
+    else_if (*x.is_singleton()) {
+        print("ELSE IF");
+    } 
+    else {
+        print("ELSE");
+    }
+    
+    return *x;
+} 
+
+void main(){
+    int x = 44;
+    
+    int y = ?foo1(x);
+    
+    int set *s1 = {1};
+     
+    int set *s2 = ?foo2(*s1);
+}
+
+?#

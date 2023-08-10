@@ -1,0 +1,21 @@
+#?
+ TEST A - a program that reads a set from a file, whose name is given,
+ displays the elements on the console, 
+ or a special message if the set is empty.
+?#
+void main(){
+
+	int set *s1;
+	*s1 <<< "int_set.txt";
+	
+	if( !(*s1.is_empty()))
+	{
+		*s1.display();
+	}
+	else
+	{
+		print("This set is empty!");
+	}
+	
+}
+## END OF THIS PROGRAM

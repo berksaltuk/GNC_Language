@@ -1,0 +1,24 @@
+#?
+
+void main(){
+
+    string set *s1 = {"a","b","c","k","f"}
+    string element = "11";
+    string deletedElement;
+    
+    for (int i = 0; i < 10; i++) {
+        *s1.push(element);
+        
+        int size = *s1.cardinality();
+        if(size != 0){
+          deletedElement = *s1.pop();
+          print("deletedElement);
+        }
+        else{
+          print("if the set is empty true will be printed: ");
+          print(*s1.is_empty());
+        }
+     }
+}
+
+?#

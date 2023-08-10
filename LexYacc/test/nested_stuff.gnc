@@ -1,0 +1,52 @@
+#? This is a program for testing nested statements
+?  It simulates a bomb defusion scenario according to the sum of elements in a set
+?#
+void main()
+{
+  int set *bomb = {};
+  print("Bomb will explode if sum of elements in your set is less than 100, but be careful if sum exceeds 100 too much it will explode anyway!\n");
+  print("Give me 10 elements:");
+  
+  for( int i = 0; i < 10; i += 1)
+  {
+    bomb.input();
+  }
+  
+  print("Okay, let me do the calculation!");
+  
+  int sum = 0;
+  
+  foreach( int num : bomb)
+  {
+    sum = sum + num;
+  }
+  
+  if( sum < 100)
+  {
+    print("Hold up, it is going to explode in 10 seconds!");
+    int x;
+    x = 0;
+    while( x < 10 )
+    {
+      print("Seconds left to the explosion: ");
+      print(10 - j);
+      i += 1;
+    }
+  }
+  else if( sum > 1000)
+  {
+    if( sum > 10000)
+      print("Why did you do that I warned y... BOOOMMMM!");
+    else
+    {
+      print("You have triggered it, it will explode in 5 seconds!");
+      for( int j = 0; j < 5; j = j + 1) { print( 5 - i); }
+      
+      print("BOOOOOMMMM!");
+    }
+  }
+  else
+    print("Bomb has been defused, thanks for saving us!");
+}
+
+?#

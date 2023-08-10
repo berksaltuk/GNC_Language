@@ -1,0 +1,17 @@
+#?
+
+void main() {
+    
+    double set *s1;
+    *s1 <<< "calculator_set.txt";
+
+    double total = 0.0;
+
+    foreach( double element : *s1) {
+        total += element;
+    }
+
+    print(total);
+}
+
+?#

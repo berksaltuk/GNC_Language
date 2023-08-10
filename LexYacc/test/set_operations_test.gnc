@@ -1,0 +1,49 @@
+#?
+
+void main(){
+   
+   int set *s1;
+   int set *s2;
+   int set *s3;
+   
+   *s1 <<< "set_01.txt";
+   *s2 <<< "set_02.txt";
+   *s3 <<< "set_03.txt"; 
+
+   int two = 2;
+
+   *s1.push(two);
+   *s3.pop();
+
+   boolean is_empty = *s2.is_empty();
+   boolean is_singelton = *s2.is_singleton();
+
+   int set *s10;
+   *s10.copy(*s2);
+
+   boolean contains = *s2.contains(10);
+
+   *s2 <<< "set_02.txt";
+   *s10 >>> "set_10.txt";
+
+   *s10.display();
+
+   int set *s4 = *s1 *u *s2;
+   int set *s5 = *s1 *n *s2;
+   *s5 = *s1 *\ *s2;
+   *s5 = *s1 *x *s2;
+
+   boolean is_superset = *s1 *> *s2;
+   boolean is_proper_subset = *s1 **< *s3;
+   boolean is_subset = *s1 *< *s2;
+
+   boolean is_overlapping = *s1 overlapping *s2;
+   boolean is_disjoint = *s1 disjoint &s2);
+
+   *s1 >>> "set_01.txt";
+   *s2 >>> "set_02.txt";
+   *s3 >>> "set_03.txt";
+}
+
+
+?#
